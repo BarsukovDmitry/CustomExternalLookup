@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FieldTypes>
+  <FieldType>
+    <Field Name="TypeName">CustomExternalLookupMulti</Field>
+    <Field Name="TypeDisplayName">CustomExternalLookupMulti</Field>
+    <Field Name="TypeShortDescription">CustomExternalLookupMulti</Field>
+    <Field Name="ParentType">MultiColumn</Field>
+    <Field Name="UserCreatable">TRUE</Field>
+    <Field Name="FieldTypeClass">CustomExternalLookup.Field.CustomExternalLookupMultiField, $SharePoint.Project.AssemblyFullName$</Field>
+    <Field Name="Filterable">FALSE</Field>
+    <Field Name="Sortable">FALSE</Field>
+    <PropertySchema>
+      <Fields>
+        <Field Name="ConnectionString" DisplayName="Строка ADO.NET для подключения к MS SQL Server" Type="Note" Description="Пример строки подключения: data source=.\SQLEXPRESS;Integrated Security=True;Initial Catalog=DBName">
+          <Default></Default>
+        </Field>
+        <Field Name="QueryString" DisplayName="Строка запроса в SQL" Type="Note" Description="Возвращаемый набор данных должен состоять из 2 столбцов: первый - ID типа Integer, второй - Value типа string. Пример: SELECT [TableId] as ID, [TableField] as Value FROM [Table]">
+          <Default></Default>
+        </Field>
+        <!--В НАДЕЖДЕ НА СВЕТЛОЕ БУДУЩЕЕ (если будет возможна фильтрация в xsltviewwebpart по multicolumn полю
+            тогда можно будет оставить только 1 этот тип поля, переименовав в CustomExternalLookupField с возможностью выбора допустимости множественных значений-->
+        <!--<Field Name="MultiSelect" DisplayName="Разрешить множественный выбор" Type="Boolean">
+          <Default>False</Default>
+        </Field>-->
+        <Field Name="PickerEntity" DisplayName="Использовать окно выбора значений" Type="Boolean" Description="Рекомендуется при большом количестве значений для выбора (>100). Не следует использовать ORDER BY в запросе">
+          <Default>False</Default>
+        </Field>
+        <Field Name="Height" DisplayName="Высота поля множественного выбора" Type="Integer" Description="Значение по умолчанию = 125">
+          <Default>125</Default>
+        </Field>
+        <Field Name="Width" DisplayName="Ширина поля множественного выбора" Type="Integer" Description="Значение по умолчанию = 143">
+          <Default>143</Default>
+        </Field>
+        <Field Name="Vertical" DisplayName="Вертикальное расположение полей множественного выбора" Type="Boolean" Description="Рекомендуется при больших текстовых значениях в полях множественного выбора">
+          <Default>False</Default>
+        </Field>
+      </Fields>
+    </PropertySchema>
+  </FieldType>
+</FieldTypes>

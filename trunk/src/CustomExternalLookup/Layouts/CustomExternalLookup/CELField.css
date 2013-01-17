@@ -1,0 +1,19 @@
+﻿div.CELGroupHorizontal
+{
+    vertical-align:middle;
+    display:inline-block;
+}
+div.CELButtonsHorizontal
+{
+    margin:10px;
+    width:16em;
+}
+div.CELGroupVertical
+{
+    vertical-align:middle;
+    display:block;
+}
+div.CELButtonsVertical
+{
+    margin:10px;
+}
