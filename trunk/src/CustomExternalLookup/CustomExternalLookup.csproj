@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0FD258BF-C66A-4884-989C-B98647D3752D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CustomExternalLookupField</RootNamespace>
+    <AssemblyName>CustomExternalLookupField</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Security" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\EntityPicker\CustomExternalLookup.QueryControl.cs" />
+    <Compile Include="Controls\EntityPicker\CustomExternalLookup.Dialog.cs" />
+    <Compile Include="Controls\EntityPicker\CustomExternalLookup.Editor.cs" />
+    <Compile Include="Controls\EntityPicker\СustomExternalLookupData.cs" />
+    <Compile Include="Field\CustomExternalLookupFieldMulti.cs" />
+    <Compile Include="Controls\CustomExternalLookup.FieldControl.cs" />
+    <Compile Include="Field\CustomExternalLookupField.cs" />
+    <Compile Include="Models\DataManager.cs" />
+    <Compile Include="SharedModule.cs" />
+    <Compile Include="Layouts\CustomExternalLookup\UpdateData.aspx.cs">
+      <DependentUpon>UpdateData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\CustomExternalLookup\UpdateData.aspx.designer.cs">
+      <DependentUpon>UpdateData.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CONTROLTEMPLATES\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4bbb9ab6-3f34-4dfd-8172-c6bee7b8cb51}</SharePointProjectItemId>
+    </None>
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{dafffa6f-14eb-4bf4-b7c4-e570d90123ce}</SharePointProjectItemId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{fa66c1f9-f54a-4866-89e8-c58ae012a1fb}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{98b65c8c-dfef-4755-938a-29c57ba2cae8}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="XML\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{894dc14a-bd3c-417b-9c22-3756a319d7b0}</SharePointProjectItemId>
+    </None>
+    <None Include="XSL\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{658ca02d-9fe9-4b40-8c07-8e3b951730ef}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Features\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CONTROLTEMPLATES\CustomExternalLookupFieldControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Images\CustomExternalLookup\BDUPDATE.GIF" />
+    <Content Include="Layouts\CustomExternalLookup\CELField.js" />
+    <Content Include="Layouts\CustomExternalLookup\CELField.css" />
+    <Content Include="Layouts\CustomExternalLookup\jquery.min.js" />
+    <Content Include="Layouts\CustomExternalLookup\LinkedSelects.js" />
+    <Content Include="Layouts\CustomExternalLookup\UpdateData.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="XML\fldtypes_CustomExternalLookupMulti.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XML\fldtypes_CustomExternalLookup.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="XSL\fldtypes_CustomExternalLookup.xsl">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" />
+</Project>

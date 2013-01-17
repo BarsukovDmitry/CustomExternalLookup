@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="98b65c8c-dfef-4755-938a-29c57ba2cae8" solutionId="98b65c8c-dfef-4755-938a-29c57ba2cae8" resetWebServer="false" name="CustomExternalLookupField" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <projectItems>
+    <projectItemReference itemId="894dc14a-bd3c-417b-9c22-3756a319d7b0" />
+    <projectItemReference itemId="4bbb9ab6-3f34-4dfd-8172-c6bee7b8cb51" />
+    <projectItemReference itemId="658ca02d-9fe9-4b40-8c07-8e3b951730ef" />
+    <projectItemReference itemId="dafffa6f-14eb-4bf4-b7c4-e570d90123ce" />
+    <projectItemReference itemId="fa66c1f9-f54a-4866-89e8-c58ae012a1fb" />
+  </projectItems>
+</package>

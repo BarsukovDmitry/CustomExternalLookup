@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FieldTypes>
+  <FieldType>
+    <Field Name="TypeName">CustomExternalLookup</Field>
+    <Field Name="TypeDisplayName">CustomExternalLookup</Field>
+    <Field Name="TypeShortDescription">CustomExternalLookup</Field>
+    <Field Name="ParentType">Text</Field>
+    <Field Name="UserCreatable">TRUE</Field>
+    <Field Name="FieldTypeClass">CustomExternalLookup.Field.CustomExternalLookupField, $SharePoint.Project.AssemblyFullName$</Field>
+    <Field Name="Filterable">TRUE</Field>
+    <Field Name="Sortable">TRUE</Field>
+    <PropertySchema>
+      <Fields>
+        <Field Name="ConnectionString" DisplayName="Строка ADO.NET для подключения к MS SQL Server" Type="Note" Description="Пример строки подключения: data source=.\SQLEXPRESS;Integrated Security=True;Initial Catalog=DBName">
+          <Default></Default>
+        </Field>
+        <Field Name="QueryString" DisplayName="Строка запроса в SQL" Type="Note" Description="Возвращаемый набор данных должен состоять из 2 столбцов: первый - ID типа Integer, второй - Value типа string. Пример: SELECT [TableId] as ID, [TableField] as Value FROM [Table]">
+          <Default></Default>
+        </Field>
+        <Field Name="PickerEntity" DisplayName="Использовать окно выбора значений" Type="Boolean" Description="Рекомендуется при большом количестве значений для выбора (>100). Не следует использовать ORDER BY в запросе">
+          <Default>False</Default>
+        </Field>
+      </Fields>
+    </PropertySchema>
+  </FieldType>
+</FieldTypes>
